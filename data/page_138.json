@@ -1,0 +1,241 @@
+[
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PELICAN AUTOMOBILE SPARES",
+    "address": "C/o. Shaileshbhai H. Jivani 301, Rajmani Complex, Nr. Gujarat Gas Office, 150 Feet Ring Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Kamleshbhai R. Loriya",
+        "mobile": "9825584122"
+      },
+      {
+        "name": "Shaileshbhai H. Jivani",
+        "mobile": "9825444022"
+      }
+    ],
+    "email": ["info@pelicanautospares.com"],
+    "phone": [],
+    "product_details": "Manufacturer Automobile Parts & Automotive Machine",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PHD ENGINEERS",
+    "address": "Kothariya Main Road, 50 Feet Road, Siyani Chambers, Nr. Jigar Pan, Street Of Sureshwar Electric, Kothariya Ring Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Hiren V. Parsana",
+        "mobile": "9924014368"
+      },
+      {
+        "name": "Dharmesh V. Parsana",
+        "mobile": "9925409373"
+      }
+    ],
+    "email": ["phd.engineers@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PRAMUKH ENGINEERS",
+    "address": "Paras Estate, Tagor Road, Opp. One Dwarka, Tagore Road, Rajkot - 360001",
+    "contacts": [
+      {
+        "name": "Ketan S. Kachhela",
+        "mobile": "9998993046"
+      }
+    ],
+    "email": ["pramukhengineers@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PRINCE ENGINEERING",
+    "address": "Atlas Ind. Area, Plot No.4A, Nr. Maldhari Railway Crossing, Opp. Hotel Krishna Park, Kothariya Ring Road, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Rajinbhai M. Ghoniya",
+        "mobile": "9979858092"
+      },
+      {
+        "name": "Nitaben B. Ghoniya",
+        "mobile": "9979858091"
+      }
+    ],
+    "email": ["princeautopart@gmail.com"],
+    "phone": ["9979858092"],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PRINCE ENGINEERING AND AUTO PARTS",
+    "address": "Plot No.4A, Atlas Industrial Area, Opp. Hotel Krishna Park, Kothariya, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Bharatbhai P. Ghoniya",
+        "mobile": "9825050485"
+      }
+    ],
+    "email": ["bg98250@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacture",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PRISM AUTOMOTIVE",
+    "address": "15, Vijay Plot Corner, Vijay Plot Main Road, B/h. Malaviya Wadi, Gondal Road, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Nautam B. Barasiya",
+        "mobile": "9879549551"
+      },
+      {
+        "name": "Divyesh Sojitra",
+        "mobile": "9712164062"
+      }
+    ],
+    "email": ["prism.automotive@gmail.com"],
+    "phone": ["2367374"],
+    "product_details": "Hyundai Car Parts Agency",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PSP ENGINEERING",
+    "address": "Plot No.2, Survey No.259/1, Sardar Industrial Area, Kothariya Solvant, Rajkot",
+    "contacts": [
+      {
+        "name": "Pankajbhai Sanghani",
+        "mobile": "9601455912"
+      },
+      {
+        "name": "Prakash Sanghani",
+        "mobile": "6355049497"
+      }
+    ],
+    "email": ["pspengineering@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturing",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "QUALIMAX INDUSTRIES",
+    "address": "7/10, Navrangpara Main Road, Mavdi Plot, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Yatinbhai H. Mangolia",
+        "mobile": "9714666664"
+      },
+      {
+        "name": "Jayagaurav H. Mangolia",
+        "mobile": "9426732444"
+      }
+    ],
+    "email": [],
+    "phone": [],
+    "product_details": "Manufacturing",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "R. E. COMPONENTS PVT. LTD.",
+    "address": "Plot No.1206, G.I.D.C. Lodhika, Gate No.2, Road No-H, Metoda - 360021",
+    "contacts": [
+      {
+        "name": "Sanjiv Vadodaria",
+        "mobile": "9898500030"
+      },
+      {
+        "name": "Smt. Dinaben Vadodaria",
+        "mobile": ""
+      }
+    ],
+    "email": ["sanjiv@recpl.co.in"],
+    "phone": ["02827287950", "02827287951"],
+    "product_details": "Engineering Product",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "RECON SPARES",
+    "address": "Plot No.10, Survey No.49, R.K. Ind. Area, Nr. Balaji Ind. Area, Ganga Forging Road, Shapar (Veraval) - 360024",
+    "contacts": [
+      {
+        "name": "Heetan B. Makadia",
+        "mobile": "9426251340"
+      },
+      {
+        "name": "Bipin M. Makadia",
+        "mobile": "8866855855"
+      }
+    ],
+    "email": ["info@reconspares.com"],
+    "phone": [],
+    "product_details": "Export",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "RELIABLE ENGG. WORKS",
+    "address": "Street No.7, Umakant Pandit Udyog Nagar, Mavdi Plot, Rajkot",
+    "contacts": [
+      {
+        "name": "Harshil Patel",
+        "mobile": "9924681810"
+      },
+      {
+        "name": "Karmit Patel",
+        "mobile": "8347707557"
+      }
+    ],
+    "email": ["reliableliners@gmail.com", "info@reliablecylinders.com"],
+    "phone": ["02812388530", "2365303"],
+    "product_details": "Engg Cylinder",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "RELIABLE VALVES",
+    "address": "Plot No. G-505, Road-B, Kishan Gate, Lodhika G.I.D.C., Metoda - 360021",
+    "contacts": [
+      {
+        "name": "Ajaybhai P. Pilay",
+        "mobile": "9825077857"
+      },
+      {
+        "name": "Kishorbhai R. Pipaliya",
+        "mobile": "9879606111"
+      }
+    ],
+    "email": ["info@reliablevalves.com"],
+    "phone": ["02827287257"],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "ROLEX RINGS LTD.",
+    "address": "B/h. Glowtech Steel, Gondal Road, Punit Nagar Road, Kothariya Ring Road, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Hiren Doshi",
+        "mobile": "9824298999"
+      },
+      {
+        "name": "Manesh D. Madeka",
+        "mobile": "9824055374"
+      }
+    ],
+    "email": ["info@rolexrings.com"],
+    "phone": ["6699777", "6699577"],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  }
+]

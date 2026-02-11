@@ -1,0 +1,229 @@
+[
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "TULSI TECHNO CAST",
+    "address": "Plot No.211/212/221/222, Golden Green Ind. Park, Ravki Road, Khambha Mavdi Plot, Rajkot - 360021",
+    "contacts": [
+      {
+        "name": "Alpesh P. Tanti",
+        "mobile": "6355899470"
+      },
+      {
+        "name": "Shailesh P. Tanti",
+        "mobile": "6351847377"
+      }
+    ],
+    "email": ["shailesh@tulsi-industries.com"],
+    "phone": ["8469919094"],
+    "product_details": "Manufacturer",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "TUSHAR AGRO INDUSTRIES",
+    "address": "C-1 B-301, Aji Ind. Area, GIDC, Phase-II, Rajkot",
+    "contacts": [
+      {
+        "name": "Shri Navalbhai Jerambhai Patel",
+        "mobile": "9825419772"
+      },
+      {
+        "name": "Shri Bhaveshbhai Jerambhai Patel",
+        "mobile": "9825079062"
+      }
+    ],
+    "email": [],
+    "phone": ["9825419772"],
+    "product_details": "Manufacturer Of Aluminium Piston",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "UNICORN VALVES",
+    "address": "Plot No. g-409/410, Opp. Decora Bhavan, GIDC, Metoda, Kalawad Road, Rajkot - 360021",
+    "contacts": [
+      {
+        "name": "Prashant B. Vachhani",
+        "mobile": "9825634511"
+      },
+      {
+        "name": "Vaibhav K. Aghera",
+        "mobile": "9879524365"
+      }
+    ],
+    "email": ["unicornvalves@yahoo.co.in"],
+    "phone": ["02827287285"],
+    "product_details": "Manufacturer",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "USHA INDUSTRIES",
+    "address": "Bhaktinagar Station Plot 12/5 Corner, Usha Industries, Bhaktinagar, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Bharat P. Jariya",
+        "mobile": "9574777977"
+      }
+    ],
+    "email": [],
+    "phone": ["9574777977"],
+    "product_details": "Manufacturing",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "VIDHI ENTERPRISE & HARDWARE",
+    "address": "30, Samrat Industries Area, End Of Gokul Dham Main Road, Gondal Road, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Rameshbhai D. Dangariya",
+        "mobile": "9825125363"
+      },
+      {
+        "name": "Bharatbhai D. Dangariya",
+        "mobile": "9825121363"
+      }
+    ],
+    "email": ["vidhienterprise@yahoo.com"],
+    "phone": ["2371235"],
+    "product_details": "Manufacturers (Pharmacy, Auto Spares & Fasteners)",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "VIKAS SALES & SERVICE",
+    "address": "10/11, \"Paresh\" Makkam Chowk, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Vinubhai M. Vachhani",
+        "mobile": "9429571688"
+      },
+      {
+        "name": "Mansukhbhai J. Aardeshna",
+        "mobile": "9825078511"
+      }
+    ],
+    "email": [],
+    "phone": ["2379631"],
+    "product_details": "",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "VISHAL INDUSTRIES",
+    "address": "1-Ram Nagar, 80 Ft Road, B/h Ajay Weigh Bridge, Aji Vasahat, Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Sagabhai B. Kandoriya",
+        "mobile": "9375717811"
+      }
+    ],
+    "email": ["vishalindustries0@gmail.com"],
+    "phone": ["9375717811", "8000751401"],
+    "product_details": "Manufacturing",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "A. R. LUBRICANT LLP",
+    "address": "32/33, Shree Hari Ind. Park, Sokhada Chowkdi, Kuvadva Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Abhishekbhai",
+        "mobile": "9909585151"
+      },
+      {
+        "name": "Bharatbhai L. Bhalodia",
+        "mobile": "9909585151"
+      }
+    ],
+    "email": ["ar.redwell@gmail.com"],
+    "phone": ["9824085151"],
+    "product_details": "Manufacturing (Automotive & Industrial Oil)",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "BIO TECH AUTO MANUFACTURING CO.",
+    "address": "Plot No. G-1974, Road-K, Street No.7D, Gate No.2, Lodhika GIDC, Kalawad Road, Metoda - 360021",
+    "contacts": [
+      {
+        "name": "Vimalkumar M. Godhani",
+        "mobile": "9925220090"
+      },
+      {
+        "name": "Smitaben V. Godhani",
+        "mobile": "9825766437"
+      }
+    ],
+    "email": ["biotechautomfg@yahoo.com"],
+    "phone": ["7043210060"],
+    "product_details": "Manufacturer Of Coolant, Lubricant And Automobile",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "BRAHMANI OIL CORPORATION",
+    "address": "Water House, Rameshwar Ind. Area, Plot No. D-20, Survey No.18, B/h Parin Furniture, Vavdi, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Rajeshbhai R. Sagparia",
+        "mobile": "8401088060"
+      },
+      {
+        "name": "Hareshbhai R. Sagparia",
+        "mobile": ""
+      }
+    ],
+    "email": ["retroclublubricant@gmail.com"],
+    "phone": [],
+    "product_details": "Automobile Oils",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "DEE INDIA OVERSEAS",
+    "address": "Bhaktinagar Station Road, 2/22, Nr. Bhaktinagar Station Circle, B/h Om Complex, Bhaktinagar, Rajkot",
+    "contacts": [
+      {
+        "name": "Divyesh Aghera",
+        "mobile": "9825075874"
+      }
+    ],
+    "email": ["info@deeindia.com", "divyesh16@gmail.com"],
+    "phone": ["2464445", "3015115"],
+    "product_details": "Automobile Parts, Exports",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "K. V. SALES CORPORATION",
+    "address": "Sardar Chowk, Plot No.41, Nr. Satyanarayan Weigh Bridge, Perfect Tata Motors Street, Vavdi, Gondal Road, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Jayesh K. Vora",
+        "mobile": "7874221111"
+      }
+    ],
+    "email": ["kvsalesjk@gmail.com"],
+    "phone": [],
+    "product_details": "Pipes & Sheets",
+    "brand": ""
+  },
+  {
+    "category_name": "Automobile Accessories",
+    "company_name": "KAVYA INTERNATIONAL",
+    "address": "Dhwani Industrial Area, Street No.2, Nr. Kothariya Solvent Railway Crossing, Gondal Road, Kothariya Area, Rajkot - 360022",
+    "contacts": [
+      {
+        "name": "Shri Bhailal N. Nasit",
+        "mobile": "9825064601"
+      }
+    ],
+    "email": ["info@kavyainternational.com"],
+    "phone": ["9825064601"],
+    "product_details": "Exporter Of Automobile Parts",
+    "brand": ""
+  }
+]

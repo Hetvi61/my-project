@@ -1,0 +1,248 @@
+[
+  {
+    "category_name": "Auto Parts",
+    "company_name": "KISHAN AUTO PARTS PVT. LTD.",
+    "address": "Lodhika GIDC, Plot No.1324/1325, Kalawad Road, Post Kbirsara, Dist. Rajkot, At. Metoda - 360024",
+    "contacts": [
+      {
+        "name": "Shantilal P. Changela",
+        "mobile": "9825075942"
+      },
+      {
+        "name": "Rajeshbhai N. Changela",
+        "mobile": "9825079943"
+      }
+    ],
+    "email": ["connectingrod@gmail.com", "info@kishanauto.com"],
+    "phone": ["02827287761", "02827287762", "02827287763"],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "LAKHANI ENGINEERING WORKS",
+    "address": "Lakhani Estate, Opp. Bhaktinagar Station, Rajkot",
+    "contacts": [
+      {
+        "name": "Darshan V. Lakhani",
+        "mobile": "9427469258"
+      },
+      {
+        "name": "Bhartiben D. Lakhani",
+        "mobile": "9427407358"
+      }
+    ],
+    "email": ["lakhani.eng@yahoo.com"],
+    "phone": ["2463370"],
+    "product_details": "Manufacturer & Exporter Of Agro Commodity, Spices, Auto Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "M. M. INDUSTRIAL SERVICES",
+    "address": "Ruda Transport Nagar Main Road, Nr. Sat Hanuman Mandir, Rajkot - Ahmedabad Highway 8B, Kuvadva Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Rakeshbhai G. Vekariya",
+        "mobile": "9979845010"
+      },
+      {
+        "name": "Maheshbhai G. Vekariya",
+        "mobile": "9824109636"
+      }
+    ],
+    "email": ["service@mmind.in"],
+    "phone": [],
+    "product_details": "Distributor Of Spare Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "MARVIN MOTORS",
+    "address": "12-B, Bhaktinagar Station Plot, Gondal Road, Opp. Ajanta Complex & Mayur Bhajiya, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Dilsukhbhai P. Hirani",
+        "mobile": "9227518510"
+      },
+      {
+        "name": "Rakeshbhai S. Hirani",
+        "mobile": "9227538510"
+      }
+    ],
+    "email": ["marvinmotors@gmail.com"],
+    "phone": ["2468510"],
+    "product_details": "Automobile Spares, Special Car Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "MASCOT DIE MOULD INDUSTRIES",
+    "address": "Plot No.1/3, Survey No.49/2, Nr. Shyam Sales Corporation, Opp. Toyota Showroom, Vill-Kangashiyali, Tal-Lodhika, Rajkot",
+    "contacts": [
+      {
+        "name": "Kumarsinh G. Zala",
+        "mobile": "9662099442"
+      }
+    ],
+    "email": ["mascotrajkot@gmail.com"],
+    "phone": ["8511105838"],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "MICROFINE AUTO PARTS PVT. LTD.",
+    "address": "Shed No.214/1-2, Phase II, Aji GIDC, End Of N Main Road, Aji Vasahat, Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Hitesh B. Mungalpara",
+        "mobile": "9925234679"
+      }
+    ],
+    "email": ["mbconrod@gmail.com"],
+    "phone": [],
+    "product_details": "Auto Parts Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "MTI CYLINDER LINERS",
+    "address": "Survey No.82, Opp. Sagar Ferex, Vandeshwar Temple Road, Nh-8B, At. Bhunava, Tal. Gondal, Gondal Road, Rajkot - 360331",
+    "contacts": [
+      {
+        "name": "Dineshbhai L. Thesia",
+        "mobile": "9824210435"
+      }
+    ],
+    "email": ["info@mtiengineparts.com"],
+    "phone": [],
+    "product_details": "Engine Auto Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "MULTI TRADE INTERNATIONAL",
+    "address": "Office No.319, Rangoli Comm. Complex, Opp. Gurukul, Nr. Over Bridge, Loha Nagar Main Road Corner, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Dinesh Laxmanbhai Thesia",
+        "mobile": "9824210435"
+      }
+    ],
+    "email": ["info@mtiengineparts.com"],
+    "phone": ["9773030455"],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "NANDISH OVERSEAS",
+    "address": "Kothariya Main Road, Off. Navdurga, 30 Feet Road, Kothariya Ring Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Rameshbhai N. Aktotia",
+        "mobile": "9426960467"
+      },
+      {
+        "name": "Amrutbhai Aktotia",
+        "mobile": "9408718953"
+      }
+    ],
+    "email": ["nandishoverseas@gmail.com"],
+    "phone": ["2362018"],
+    "product_details": "Exports Of Auto Parts, Cylinders, Sleeves",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "OM ASHISH ENGINEERING CO.",
+    "address": "Survey No.235, Plot No.37, Ravechinagar, National Highway Road, B/h. Samrat Granite, Kothariya Solvant, Kothariya Ring Road, Rajkot - 360022",
+    "contacts": [
+      {
+        "name": "Ashish Banugaria",
+        "mobile": "9427732315"
+      },
+      {
+        "name": "Pravinchandra Banugaria",
+        "mobile": "9824532315"
+      }
+    ],
+    "email": ["omashishengineering@yahoo.co.in"],
+    "phone": ["9427732315"],
+    "product_details": "Auto Parts Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "OM ENGINEERING AND MARKETING",
+    "address": "Santosh Park 3, Gate No.1, Block No.10, Raiya Road, Nr. Raiya Circle, B/h. Sterling Hospital, 150 Feet Ring Road, Rajkot - 360007",
+    "contacts": [
+      {
+        "name": "Shweta D. Joshi",
+        "mobile": "9924195108"
+      },
+      {
+        "name": "Hiren D. Joshi",
+        "mobile": "9574742820"
+      }
+    ],
+    "email": ["omengmarketing19@yahoo.com"],
+    "phone": [],
+    "product_details": "Export",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "OM INTERNATIONALS",
+    "address": "209, Gokuldham Society, Krushna Nagar Main Road, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Himanshu S. Shah",
+        "mobile": "9824603676"
+      }
+    ],
+    "email": [],
+    "phone": ["2311105"],
+    "product_details": "Auto Parts, Cylinder Liner Trading",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "OMKAR TRADERS",
+    "address": "Survey No.239/1, Plot No.1, Sub Plot 1/14, Behind Rollwell Forge, Nr. Geb Substation, Kishan Cement Gate, Shapar-Veraval, Rajkot",
+    "contacts": [
+      {
+        "name": "Hareshkumar M. Makdiya",
+        "mobile": "7405064200"
+      },
+      {
+        "name": "Jigneshkumar M. Makdiya",
+        "mobile": ""
+      }
+    ],
+    "email": [],
+    "phone": [],
+    "product_details": "Tractor And Agriculture Part",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "PARAGON ACCESSORIES PVT. LTD.",
+    "address": "Survey No.671, Plot No.2, Sopan Industrial Zone - 1, Nr. Microwave Tower, 8-B National Highway, Shapar-Veraval",
+    "contacts": [
+      {
+        "name": "Dipakbhai R. Visaveliya",
+        "mobile": "9722002223"
+      },
+      {
+        "name": "Jayantibhai A. Rupapara",
+        "mobile": "9879791358"
+      }
+    ],
+    "email": ["paragon.accessoriespvtltd@gmail.com"],
+    "phone": ["9722002223"],
+    "product_details": "Manufacturing Of Two Wheeler Accessories",
+    "brand": ""
+  }
+]

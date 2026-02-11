@@ -1,0 +1,252 @@
+[
+  {
+    "category_name": "Auto Parts",
+    "company_name": "ATUL AUTO LTD.",
+    "address": "8-B, National Highway, Near Microwave Tower, Shapar-Veraval - 360002",
+    "contacts": [
+      {
+        "name": "Itiyendra V. Adhiya",
+        "mobile": "9824212124"
+      },
+      {
+        "name": "Niraj J. Chandra",
+        "mobile": "7046099902"
+      }
+    ],
+    "email": ["info@atulauto.co.in"],
+    "phone": ["912827235500"],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "AURA PRECISION PVT. LTD.",
+    "address": "Plot No.241, Survey No.416, Chhatral Building, Opp. Bhaktinagar Station, Bhaktinagar, Rajkot - 360002",
+    "contacts": [
+      {
+        "name": "Gaurangbhai Patel",
+        "mobile": "9945119999"
+      },
+      {
+        "name": "Kamlesh Chhatrala",
+        "mobile": "9924511999"
+      }
+    ],
+    "email": ["info@auraprecision.in"],
+    "phone": [],
+    "product_details": "Manufacturer Of Motor Vehicles Part And Accessories",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "AUTOMOTIVE MANU. PVT. LTD.",
+    "address": "N.H.-8B, Gondal Road, Opp. Parin Furniture, Kothariya Ring Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Shri P. R. Kamdar",
+        "mobile": "9824801654"
+      }
+    ],
+    "email": ["amrajkot@yahoo.com"],
+    "phone": ["278206465"],
+    "product_details": "Automobile Dealer",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "AVADHESH AGENCIES",
+    "address": "13, Vijay Plot, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Bharatbhai M. Barai",
+        "mobile": "9824041849"
+      },
+      {
+        "name": "Alap B. Barai",
+        "mobile": "9904000080"
+      }
+    ],
+    "email": ["imbara@hotmail.com"],
+    "phone": ["2461854"],
+    "product_details": "Auto Parts And Bpcl Mak Lubricants",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "AVR VALVES PVT. LTD.",
+    "address": "Plot No.23/17/18/29, Almighty Gate No.2, Metoda GIDC, Dist. Rajkot - 360021",
+    "contacts": [
+      {
+        "name": "R. R. Jain",
+        "mobile": "9227742866"
+      },
+      {
+        "name": "Vikram R. Jain",
+        "mobile": "9227707070"
+      }
+    ],
+    "email": ["info@vikramvalves.com"],
+    "phone": ["2387266", "02827287358"],
+    "product_details": "Manufacturers Of Valves",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "AXIS INDIA",
+    "address": "Survey No.43/1, Plot No.59, 150 Feet Ring Road, Gondal Road, Bypass Circle, B/h Jackon Co., Vavdi, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Mitesh Karshanbhai Parsana",
+        "mobile": "9099057177"
+      }
+    ],
+    "email": ["mitesh9099057177@gmail.com"],
+    "phone": [],
+    "product_details": "Autoparts Jobwork & Manufactures",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "B. K. ENGINEERING WORKS",
+    "address": "Karma Bhumi, 3-Atika Ind. Area, B/h. Atika Rubber Mill, Dhebar Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Nitinhbhai P. Desai",
+        "mobile": "9879003619"
+      }
+    ],
+    "email": [],
+    "phone": ["9879003619"],
+    "product_details": "Manufacturers Of Auto Part And Mechanical Jack",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "BALVI INDUSTRIAL CORPORATION",
+    "address": "Plot No. G-1611, Gate No.2, Lodhika GIDC",
+    "contacts": [
+      {
+        "name": "Sangani Anilbhai Becharbhai",
+        "mobile": "9824428209"
+      },
+      {
+        "name": "Sangani Girish Becharbhai",
+        "mobile": "9898048209"
+      }
+    ],
+    "email": ["balviindustrialcorporation@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "CAREER MACHINERY CORPORATION",
+    "address": "3, Pandit Umakant Udyognagar, Nr. Ashok Garden, Khedut Tailor Street, Mavdi Plot, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Ankit M. Padadiya",
+        "mobile": "9824074294"
+      },
+      {
+        "name": "Shardaben M. Radadiya",
+        "mobile": ""
+      }
+    ],
+    "email": ["info@careeramc@gmail.com"],
+    "phone": ["9824074294"],
+    "product_details": "Manufacturer Of Autoparts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "CAST & ALLOYS",
+    "address": "3, Pandit Umakant Udyognagar, Nr. Ashok Garden, Khedut Tailor Street, Mavdi Plot, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Shri Dipen C. Patel",
+        "mobile": "9824042401"
+      }
+    ],
+    "email": ["info@cast-alloys.com"],
+    "phone": ["2463109"],
+    "product_details": "Aluminium Forging And Auto Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "COUSSINET ENGINEERS",
+    "address": "No.32-A, Bhaktinagar Ind. Estate, Bhaktinagar, Rajkot",
+    "contacts": [
+      {
+        "name": "Abhinav Kapoor",
+        "mobile": "9824042074"
+      },
+      {
+        "name": "Ashok Kapoor",
+        "mobile": "9824544985"
+      }
+    ],
+    "email": [],
+    "phone": ["2362706"],
+    "product_details": "Auto Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "D. Y. ENGINEERING",
+    "address": "1-New Parmeshwar Society, Nr. Pancheshwar Estate, Nr. Amardeep Foundry, Dhebar Road, Atika Area, Rajkot - 360001",
+    "contacts": [
+      {
+        "name": "Yogesh M. Vasoya",
+        "mobile": "9913370707"
+      },
+      {
+        "name": "Sangita Y. Vasoya",
+        "mobile": "9913370707"
+      }
+    ],
+    "email": ["dyengsolution@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "DATTATREYA AUTO SPARES",
+    "address": "Shop No.2, Parishram Plaza, Mangala Main Road, Opp. APCB Bank, Lodhavad Chowk, Rajkot",
+    "contacts": [
+      {
+        "name": "Ananty Bhalodia",
+        "mobile": "997930805"
+      },
+      {
+        "name": "Hitesh Bhalodia",
+        "mobile": "9824312451"
+      }
+    ],
+    "email": ["dattatreyaautospares@yahoo.in"],
+    "phone": ["2480282"],
+    "product_details": "Auto Spare Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "BHARTI AUTOMOBILES",
+    "address": "Opp. Malaviya Wadi, \"Dhartidham\", Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Mahendrabhai K. Lakhani",
+        "mobile": "9825366681"
+      },
+      {
+        "name": "Dineshbhai M. Lakhani",
+        "mobile": "9099055333"
+      }
+    ],
+    "email": [],
+    "phone": ["2226053", "2225270"],
+    "product_details": "Showroom",
+    "brand": ""
+  }
+]

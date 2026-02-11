@@ -1,0 +1,161 @@
+[
+  {
+    "category_name": "AGARBATTI / INCENSES",
+    "company_name": "ABHINAV PERFUMERS",
+    "address": "C/o. R. D. Agency, 7-Raghuvir Para, Shriji Complex, Garedia Kuva Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Bhaveshbhai Karia",
+        "mobile": "9824210838"
+      },
+      {
+        "name": "Piyush Girdharal Kotak",
+        "mobile": ""
+      }
+    ],
+    "email": ["abhinav126@hotmail.com"],
+    "phone": ["2222272", "2220612"],
+    "product_details": "Agarbati-perfum",
+    "brand": ""
+  },
+  {
+    "category_name": "AGARBATTI / INCENSES",
+    "company_name": "ALAUKIK INCENSE AND AROMAS LLP",
+    "address": "Plot No.09, Satyam Industrial Area, Khirasara Lodhika Road, Nr Nyara Petrol Pump, Balsar - 360021, District-Rajkot",
+    "contacts": [
+      {
+        "name": "Hemang H. Morzaria",
+        "mobile": "9106691989"
+      }
+    ],
+    "email": ["alaukikincense@gmail.com"],
+    "phone": ["02812224484"],
+    "product_details": "Manufacturer (agarbati)",
+    "brand": ""
+  },
+  {
+    "category_name": "AGARBATTI / INCENSES",
+    "company_name": "ASEEM PERFUME AND COSMETICS",
+    "address": "G-726, Nr. Telephone Exchange, Almighty Gate No.2, Kalawad Road, GIDC, Metoda - 360021",
+    "contacts": [
+      {
+        "name": "Milind Charavada",
+        "mobile": "9409042004"
+      },
+      {
+        "name": "Kiran G. Patadia",
+        "mobile": "9726678771"
+      }
+    ],
+    "email": ["aseemperfume2020@gmail.com"],
+    "phone": ["02827287797"],
+    "product_details": "Manufacturing Of Perfume, Roll On, Attar",
+    "brand": ""
+  },
+  {
+    "category_name": "AGARBATTI / INCENSES",
+    "company_name": "JANAK PERFUMERS",
+    "address": "Parabazar, Nr. Raiya Naka Tower, Para Bazar, Rajkot - 360001",
+    "contacts": [
+      {
+        "name": "Deepakbhai B. Dangar",
+        "mobile": "9426216808"
+      },
+      {
+        "name": "Bharatbhai B. Dangar",
+        "mobile": "9825422407"
+      }
+    ],
+    "email": ["janak.tapal@gmail.com", "accounts@janakperfumers.com"],
+    "phone": ["2223559", "6542777"],
+    "product_details": "",
+    "brand": ""
+  },
+  {
+    "category_name": "AGRI IMPLEMENTS & GARDEN TOOLS",
+    "company_name": "AGROLT SOLUTIONS PVT. LTD.",
+    "address": "Survey No.84, Plot No.3/4/5, Nr. Shining Engineers, National Highway 27, Shapar Veraval - 360024",
+    "contacts": [
+      {
+        "name": "Pratik Pachani",
+        "mobile": "9081047400"
+      },
+      {
+        "name": "Hardik Rakhdiya",
+        "mobile": "9081047300"
+      }
+    ],
+    "email": ["connect.aspl@gmail.com"],
+    "phone": ["2827299710"],
+    "product_details": "Manufacture",
+    "brand": ""
+  },
+  {
+    "category_name": "AGRI IMPLEMENTS & GARDEN TOOLS",
+    "company_name": "JALARAM MARKETING",
+    "address": "Jalaram Chamber, Rajputpara Main Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Shyambhai K. Ghedia",
+        "mobile": "8511777777"
+      },
+      {
+        "name": "Jamanbhai A. Ghedia",
+        "mobile": "9904555557"
+      }
+    ],
+    "email": ["jalarammachinerystores@yahoo.com", "shyam@jalarammarketing.com"],
+    "phone": ["2228888", "2231130"],
+    "product_details": "Trading",
+    "brand": ""
+  },
+  {
+    "category_name": "AGRI IMPLEMENTS & GARDEN TOOLS",
+    "company_name": "KRISHNA METACRAFT PVT. LTD.",
+    "address": "119, Lotus Arcade, Opp. Auto Motiveman Ltd., Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Shri Sanjaybhai V. Patel",
+        "mobile": "9825072622"
+      }
+    ],
+    "email": ["krishnametacraft@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturer & Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "AGRI IMPLEMENTS & GARDEN TOOLS",
+    "company_name": "SARTHI CHEM PVT. LTD.",
+    "address": "Plot No.H-254, G.I.D.C. Kuvavda Road, Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Jagdishbhai T. Aghera",
+        "mobile": "9825232419"
+      }
+    ],
+    "email": ["info@sarthichem.com"],
+    "phone": ["02812784480"],
+    "product_details": "Manufacturers Of Insecticide",
+    "brand": ""
+  },
+  {
+    "category_name": "AGRI IMPLEMENTS & GARDEN TOOLS",
+    "company_name": "SHIVAJI EXIM",
+    "address": "Nr. Siddheshvar Mahadev Temple, Janki Park-1, B/h Astha Residency, 150 Ft. Ring Road, Rajkot - 360005",
+    "contacts": [
+      {
+        "name": "Hardik V. Kakadiya",
+        "mobile": "8460552068"
+      },
+      {
+        "name": "Jayeshkumar K. Raghavani",
+        "mobile": "7698989888"
+      }
+    ],
+    "email": ["shivajiexim5@gmail.com"],
+    "phone": [],
+    "product_details": "Export - Import (agriculture Products)",
+    "brand": ""
+  }
+]

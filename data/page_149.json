@@ -1,0 +1,271 @@
+[
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SANMATI ENGINE PARTS EXPORTS PVT. LTD.",
+    "address": "408, Star Chamber, Harihar Chowk, Sadar Bazar, Harihar Chowk, Rajkot - 360001",
+    "contacts": [
+      {
+        "name": "Bhisma D. Parekh",
+        "mobile": "9898571720"
+      }
+    ],
+    "email": [],
+    "phone": [],
+    "product_details": "Engine Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SATYAM AUTO PRODUCTS",
+    "address": "Plot No.10, Radiya Estate, Old Kishor Oil Mill, 1-4 Mavdi Plot, Rajkot",
+    "contacts": [
+      {
+        "name": "Bipin P. Panchani",
+        "mobile": "9879574846"
+      },
+      {
+        "name": "Dipak M. Mathukiya",
+        "mobile": "9825074846"
+      }
+    ],
+    "email": ["satyamauto@gmail.com"],
+    "phone": ["2367110"],
+    "product_details": "Auto Parts Manufacturers Of Engine",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SATYAY INDUSTRY (INDIA)",
+    "address": "Navrangpara Main Road, Mavdi Plot, Rajkot",
+    "contacts": [
+      {
+        "name": "Himatbhai M. Mangrolia",
+        "mobile": "9714666664"
+      },
+      {
+        "name": "Yatinbhai H. Mangrolia",
+        "mobile": "9924041890"
+      }
+    ],
+    "email": ["satyay@satyay.com"],
+    "phone": ["2388036", "2360411"],
+    "product_details": "",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SEATECH",
+    "address": "M. M. Industrial Service, Ruda Transport Nagar Main Road, Nr. Saat Hanuman Temple, N H 8-B, Nr. Petrol Pump, Kuvadva Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Rakesh G. Vekariya",
+        "mobile": "9979845010"
+      },
+      {
+        "name": "Mahesh G. Vekariya",
+        "mobile": "9824109636"
+      }
+    ],
+    "email": ["sales@seatech.in"],
+    "phone": ["2705222", "2706326"],
+    "product_details": "Automobile Dealer",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SHREE GANESH ENGINEERS",
+    "address": "Plot No. K1-242, Phase-1, Q-2 Road, Aji GIDC, Aji Vasahat, Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Ronakbhai K. Pansuriya",
+        "mobile": "9824513550"
+      },
+      {
+        "name": "Nikunjbhai K. Pansuriya",
+        "mobile": ""
+      }
+    ],
+    "email": ["shreeganeshcnc@gmail.com"],
+    "phone": [],
+    "product_details": "Manufacturers Of Auto Parts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SHREE KHODAL INDUSTRIES",
+    "address": "3-Ramnagar, 80 Ft Road, Aji Vasahat, Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Rajinbhai G. Dholariya",
+        "mobile": ""
+      }
+    ],
+    "email": ["skmpr@yahoo.com"],
+    "phone": ["9824856885"],
+    "product_details": "Manufacturing Of Oil Size Piston Ring",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SHREE RAM AUTO LINERS",
+    "address": "2, Mavdi Plot, Nr. Siroya Engineering Works, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Ashwinbhai N. Patel",
+        "mobile": "9727752100"
+      },
+      {
+        "name": "Smt. Archana A. Aktiya",
+        "mobile": ""
+      }
+    ],
+    "email": [],
+    "phone": ["9727752100"],
+    "product_details": "Manufacturer Of Auto Parts Liners",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SHUBH COMPONENTS",
+    "address": "R. S. No.401/4, Plot No.25, 2-Umakant Pandit Udyog Nagar, Nr. Ashok Garden, Mavdi Road, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Keval Ghanshyambhai Gadhesariya",
+        "mobile": "7265075072"
+      },
+      {
+        "name": "Vivek Zalavadiya",
+        "mobile": "8160931105"
+      }
+    ],
+    "email": ["shubhcomponents@gmail.com"],
+    "phone": ["9723329042"],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SIDDHIVINAYAK MOTORS PVT. LTD.",
+    "address": "Nr. Rajkamal Petrol Pump, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Mohit B. Zala",
+        "mobile": "9924118693"
+      },
+      {
+        "name": "Mayur B. Zala",
+        "mobile": "9824000042"
+      }
+    ],
+    "email": ["mayurjhaj@gmail.com"],
+    "phone": ["9824000070"],
+    "product_details": "Mahindra Authorise Dealer",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SMB ENGINE VALVES",
+    "address": "Metoda GIDC Plot No.2626, Gate No.1, Road D-5, Tal. Lodhika, Dist. Rajkot, Metoda - 360021",
+    "contacts": [
+      {
+        "name": "Shrishbhai Ravani",
+        "mobile": "9824210440"
+      },
+      {
+        "name": "Bhavik S. Ravani",
+        "mobile": "9824414148"
+      }
+    ],
+    "email": ["info@suzukivalves.com"],
+    "phone": [],
+    "product_details": "Auto Parts Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SRIMANTA OVERSEAS",
+    "address": "Shri Balaji, 5 Aardhana Society, Nr. Airport Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Anan N. Kothari",
+        "mobile": "9624333333"
+      },
+      {
+        "name": "Niranjan Kothari",
+        "mobile": ""
+      }
+    ],
+    "email": ["info@srimantaliners.com"],
+    "phone": [],
+    "product_details": "Exporter",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SSV VALVES",
+    "address": "8/9, Rajyog Building, B/h. Silver Chamber, Tagore Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Manaharsinh K. Jadav",
+        "mobile": "9925500009"
+      },
+      {
+        "name": "Rajendrasinh M. Jadav",
+        "mobile": "9825434661"
+      }
+    ],
+    "email": [],
+    "phone": [],
+    "product_details": "Manufacturers Of I. C. Engine Valves",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "STAR TECHNO MECH PVT. LTD.",
+    "address": "Techno Chowk, Pardi Survey No.493/3, Shitalal Mandir Road, Kishan Cement Gate, Shapar-Veraval - 360024",
+    "contacts": [
+      {
+        "name": "Sanjay R. Patel",
+        "mobile": "9879593186"
+      }
+    ],
+    "email": [],
+    "phone": [],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "SUNNY ENGINEERING INDUSTRIES",
+    "address": "Plot No. G-1117/1100, Road-1/C, GIDC, Lodhika, At. Metoda, Dist. Rajkot - 360024",
+    "contacts": [
+      {
+        "name": "Akash G. Chavhni",
+        "mobile": "9825488885"
+      }
+    ],
+    "email": ["sunnyengineering@yahoo.com"],
+    "phone": ["02827287417"],
+    "product_details": "Auto Parts Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "TULSI PRECISION PRODUCTS LLP",
+    "address": "Plot No.213/214/219/220, Golden Green Ind Park, Ravki Road, Khambha, 150 Feet Ring Road, Lodhika, Rajkot",
+    "contacts": [
+      {
+        "name": "Alpesh P. Tanti",
+        "mobile": "6351847377"
+      },
+      {
+        "name": "Shailesh P. Tanti",
+        "mobile": "6355899470"
+      }
+    ],
+    "email": ["shailesh@tulsi-industries.com"],
+    "phone": ["6351847377"],
+    "product_details": "Manufacturer",
+    "brand": ""
+  }
+]

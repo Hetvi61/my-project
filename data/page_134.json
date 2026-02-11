@@ -1,0 +1,169 @@
+[
+  {
+    "category_name": "Auto Parts",
+    "company_name": "DND INDUSTRIES",
+    "address": "G-1880 Metoda, G.I.D.C, Road No.5, Nr. Gujrat Gas Godown Almighty Gate, Dist. Rajkot, Metoda - 360024",
+    "contacts": [
+      {
+        "name": "Shri Nileshbhai D. Dangariya",
+        "mobile": "9825125363"
+      },
+      {
+        "name": "Shri Bharatbhai D. Dangariya",
+        "mobile": "9428039926"
+      }
+    ],
+    "email": ["info_dndindustries@yahoo.com"],
+    "phone": [],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "FINE THREAD FORM INDUSTRIES",
+    "address": "Plot No.373/1, 373/2, Road No.0, Aji GIDC Industrial Estate, GIDC Rajkot - 360003",
+    "contacts": [
+      {
+        "name": "Dharmendrasingh S. Vaghela",
+        "mobile": "9825216132"
+      }
+    ],
+    "email": ["info@fftfasteners.com"],
+    "phone": ["238466163"],
+    "product_details": "Manufacture Of Nutbolt, Autoparts",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "G. M. EXPORT INDIA",
+    "address": "Survey No.217, Plot No.09, G. M. Export, Kotada Sangani, Dist. Rajkot, Veraval (Shapar) - 360021",
+    "contacts": [
+      {
+        "name": "Vinubhai N. Vekariya",
+        "mobile": "9723688888"
+      },
+      {
+        "name": "Vasantbhai L. Mangroliya",
+        "mobile": "9723666666"
+      }
+    ],
+    "email": ["vinod@gmail.com"],
+    "phone": ["9723688888"],
+    "product_details": "Manufacturer",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "GOKUL AUTO MANUFACTURERS",
+    "address": "N. H. 27, Vavdi, Survey No.32, Nr. Perfect Tata Showroom, Gondal Road, Rajkot",
+    "contacts": [
+      {
+        "name": "Shri Raskikbhai B. Patel",
+        "mobile": "9824280795"
+      },
+      {
+        "name": "Shri Gokulbhai B. Patel",
+        "mobile": "9825673668"
+      }
+    ],
+    "email": ["gokul@gokulauto.com"],
+    "phone": ["8980280795"],
+    "product_details": "Manufacturer Of Auto Part Merchant",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "GURUDEV AUTO INDUSTRIES PVT. LTD.",
+    "address": "Plot No. P-208, Road No. A-10, Kranti Gate, Metoda GIDC, Tal. Lodhika - 360021",
+    "contacts": [
+      {
+        "name": "Piyushbhai S. Parsana",
+        "mobile": "9924844873"
+      },
+      {
+        "name": "Nitin A. Ramani",
+        "mobile": "9904044880"
+      }
+    ],
+    "email": ["info@gurudevauto.com"],
+    "phone": ["02827286001"],
+    "product_details": "Manufacturers",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "JAY AUTO PARTS CO.",
+    "address": "Arihant, Mangla Road - 6/7, Manhar Plot, Rajkot",
+    "contacts": [
+      {
+        "name": "Rushit Dhulia",
+        "mobile": "9879587950"
+      },
+      {
+        "name": "Dhiresh Dhulia",
+        "mobile": "9909904500"
+      }
+    ],
+    "email": ["jayautopartsco@yahoo.com"],
+    "phone": ["2467185", "2460282"],
+    "product_details": "",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "JAY LAXMI AUTO",
+    "address": "Amar Nagar Main Road, Umakant Pandit Udyog Nagar, Nr. Deepak Machine Tools, Rajkot - 360004",
+    "contacts": [
+      {
+        "name": "Maheshbhai P. Babaria",
+        "mobile": "9426979721"
+      },
+      {
+        "name": "Dineshbhai P. Babaria",
+        "mobile": "9408004552"
+      }
+    ],
+    "email": ["jaylaxmiautodk@gmail.com"],
+    "phone": ["9426979721"],
+    "product_details": "Trading",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "JAY METAL",
+    "address": "R. S. No.78, B/h. Archer Metal, Tal-Kotda Sangani, Dist-Rajkot Shapar-Veraval - 360021",
+    "contacts": [
+      {
+        "name": "Vinodbhai B. Sakhiya",
+        "mobile": "9824490915"
+      },
+      {
+        "name": "Sanjaybhai B. Sakhiya",
+        "mobile": "9824085088"
+      }
+    ],
+    "email": ["jaymetal1@ymail.com"],
+    "phone": ["02827252914"],
+    "product_details": "Manufacturer",
+    "brand": ""
+  },
+  {
+    "category_name": "Auto Parts",
+    "company_name": "JAYSON INDUSTRIES",
+    "address": "Street No.9, Aji Udyogik Vasahat, 80 Ft. Road, Ajay Weigh Bridge Street, Aji Vasahat, Rajkot",
+    "contacts": [
+      {
+        "name": "Parthbhai P. Ganatra",
+        "mobile": "9825478877"
+      },
+      {
+        "name": "Shaileshbhai J. Ganatra",
+        "mobile": "9898012051"
+      }
+    ],
+    "email": ["jaysons_engineers@rediffmail.com"],
+    "phone": ["2387361"],
+    "product_details": "Mfg Of Auto Parts",
+    "brand": ""
+  }
+]
