@@ -3,10 +3,12 @@ import { connectDB } from '@/lib/mongodb'
 import ScheduledJob from '@/models/ScheduledJob'
 import PastJob from '@/models/PastJob'
 
+/* ================= CORE LOGIC ================= */
 async function runJobs() {
   await connectDB()
   const now = new Date()
 
+  // 🔹 FETCH ONLY PENDING & DUE JOBS
   const jobs = await ScheduledJob.find({
     scheduled_datetime: { $lte: now },
     job_status: 'to_do',
@@ -14,8 +16,14 @@ async function runJobs() {
 
   for (const job of jobs) {
     try {
-      // 🔹 Job execution logic will come later (WhatsApp, etc.)
+      // 🔹 MARK JOB AS IN_PROGRESS (VERY IMPORTANT)
+      await ScheduledJob.findByIdAndUpdate(job._id, {
+        job_status: 'in_progress',
+      })
 
+      // 🔹 FUTURE: WhatsApp / Email / API logic will go here
+
+      // ✅ MOVE TO PAST JOBS (SUCCESS)
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -27,9 +35,13 @@ async function runJobs() {
         delivered_datetime: new Date(),
       })
 
+      // ✅ REMOVE FROM SCHEDULED JOBS
       await ScheduledJob.findByIdAndDelete(job._id)
 
     } catch (err) {
+      console.error('Job failed:', err)
+
+      // ❌ MOVE TO PAST JOBS (FAILED)
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -48,24 +60,39 @@ async function runJobs() {
   return jobs.length
 }
 
-/* 🔹 FOR VERCEL CRON (AUTO) */
+/* ================= VERCEL CRON (AUTO) ================= */
+/* Cron ALWAYS uses GET */
 export async function GET() {
   try {
     const processed = await runJobs()
-    return NextResponse.json({ success: true, processed })
+    return NextResponse.json({
+      success: true,
+      source: 'cron',
+      processed,
+    })
   } catch (error) {
     console.error('Runner GET error:', error)
-    return NextResponse.json({ error: 'Runner failed' }, { status: 500 })
+    return NextResponse.json(
+      { error: 'Runner failed (cron)' },
+      { status: 500 }
+    )
   }
 }
 
-/* 🔹 FOR MANUAL RUN (BUTTON / POSTMAN) */
+/* ================= MANUAL RUN (BUTTON / POSTMAN) ================= */
 export async function POST() {
   try {
     const processed = await runJobs()
-    return NextResponse.json({ success: true, processed })
+    return NextResponse.json({
+      success: true,
+      source: 'manual',
+      processed,
+    })
   } catch (error) {
     console.error('Runner POST error:', error)
-    return NextResponse.json({ error: 'Runner failed' }, { status: 500 })
+    return NextResponse.json(
+      { error: 'Runner failed (manual)' },
+      { status: 500 }
+    )
   }
 }
