@@ -64,12 +64,20 @@ async function runJobs() {
 /* ================= AUTO (GitHub Actions / Cron) ================= */
 export async function POST(req: Request) {
   try {
-    // 🔐 SECURITY CHECK
-    const secret = req.headers.get('x-cron-secret')
+    const headerSecret = req.headers.get('x-cron-secret')
+    const envSecret = process.env.CRON_SECRET
 
-    if (secret !== process.env.CRON_SECRET) {
+    // 🔍 TEMP DEBUG LOGS (VERY IMPORTANT)
+    console.log('HEADER SECRET =>', headerSecret)
+    console.log('ENV SECRET =>', envSecret)
+
+    if (headerSecret !== envSecret) {
       return NextResponse.json(
-        { error: 'Unauthorized' },
+        {
+          error: 'Unauthorized',
+          headerSecret,
+          envSecret,
+        },
         { status: 401 }
       )
     }
@@ -89,6 +97,7 @@ export async function POST(req: Request) {
     )
   }
 }
+
 
 /* ================= OPTIONAL MANUAL (ADMIN BUTTON) ================= */
 /* Call this from admin panel with same secret */
