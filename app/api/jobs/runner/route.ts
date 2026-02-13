@@ -65,7 +65,7 @@ async function runJobs() {
 export async function POST(req: Request) {
   try {
     // 🔐 SECURITY CHECK
-    const secret = req.headers.get('CRON-SECRET')
+    const secret = req.headers.get('CRON_SECRET')
 
     if (secret !== process.env.CRON_SECRET) {
       return NextResponse.json(
