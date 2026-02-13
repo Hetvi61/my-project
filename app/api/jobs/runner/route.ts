@@ -17,15 +17,10 @@ async function runJobs() {
 
   for (const job of jobs) {
     try {
-      // 🔹 Mark as in progress
       await ScheduledJob.findByIdAndUpdate(job._id, {
         job_status: 'in_progress',
       })
 
-      // 🔹 FUTURE ACTION (WhatsApp / Email / API)
-      // await sendMessage(job)
-
-      // ✅ Success → move to past jobs
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -38,11 +33,7 @@ async function runJobs() {
       })
 
       await ScheduledJob.findByIdAndDelete(job._id)
-
     } catch (err) {
-      console.error('Job failed:', err)
-
-      // ❌ Failure → move to past jobs
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -61,8 +52,7 @@ async function runJobs() {
   return jobs.length
 }
 
-
-/* ================= AUTO (GitHub Actions / Cron) ================= */
+/* ================= TEMP BYPASS (POST ONLY) ================= */
 export async function POST() {
   const processed = await runJobs()
 
@@ -73,32 +63,9 @@ export async function POST() {
   })
 }
 
-
-/* ================= OPTIONAL MANUAL (ADMIN BUTTON) ================= */
-/* Call this from admin panel with same secret */
-export async function GET(req: Request) {
-  try {
-    const secret = req.headers.get('x-cron-secret')
-
-    if (secret !== process.env.CRON_SECRET) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
-    }
-
-    const processed = await runJobs()
-
-    return NextResponse.json({
-      success: true,
-      source: 'manual',
-      processed,
-    })
-  } catch (error) {
-    console.error('Runner GET error:', error)
-    return NextResponse.json(
-      { error: 'Runner failed' },
-      { status: 500 }
-    )
-  }
+/* ================= TEMP BYPASS (GET ALSO) ================= */
+export async function GET() {
+  return NextResponse.json({
+    message: 'RUNNER BYPASS ACTIVE (GET)',
+  })
 }
