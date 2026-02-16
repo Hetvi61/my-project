@@ -7,6 +7,7 @@ export async function POST(req: Request) {
     await connectDB()
     const body = await req.json()
 
+    // Basic validation
     if (!body.client_name || !body.job_name || !body.scheduled_datetime) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -14,34 +15,21 @@ export async function POST(req: Request) {
       )
     }
 
-    let scheduledUTC: Date
-    const input = body.scheduled_datetime
-
     /**
-     * If datetime already has timezone info (Z or +05:30)
-     * let JS handle it
+     * IMPORTANT RULE
+     * ----------------
+     * Frontend sends IST time (from datetime-local)
+     * Backend ALWAYS converts IST → UTC ONCE
+     * MongoDB stores ONLY UTC
      */
-    if (
-      typeof input === 'string' &&
-      (input.includes('Z') || input.includes('+'))
-    ) {
-      scheduledUTC = new Date(input)
-    } else {
-      /**
-       * Input is IST (from datetime-local)
-       * Format: YYYY-MM-DDTHH:mm
-       * We must MANUALLY convert IST → UTC
-       */
 
-      const [datePart, timePart] = input.split('T')
-      const [year, month, day] = datePart.split('-').map(Number)
-      const [hour, minute] = timePart.split(':').map(Number)
+    // body.scheduled_datetime example: "2026-02-16T12:22"
+    const istDate = new Date(body.scheduled_datetime)
 
-      // Create UTC date by subtracting IST offset (5:30)
-      scheduledUTC = new Date(
-        Date.UTC(year, month - 1, day, hour - 5, minute - 30)
-      )
-    }
+    // Convert IST → UTC (subtract 5 hours 30 minutes)
+    const scheduledUTC = new Date(
+      istDate.getTime() - (5.5 * 60 * 60 * 1000)
+    )
 
     const job = await ScheduledJob.create({
       client_name: body.client_name,
@@ -49,8 +37,8 @@ export async function POST(req: Request) {
       job_type: body.job_type || 'post',
       job_json: body.job_json,
       job_media_url: body.job_media_url,
-      scheduled_datetime: scheduledUTC, // ✅ correct UTC
-      created_datetime: new Date(),
+      scheduled_datetime: scheduledUTC, // ✅ stored in UTC
+      created_datetime: new Date(),     // UTC automatically
       job_status: 'to_do',
     })
 
