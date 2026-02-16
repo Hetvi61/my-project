@@ -15,12 +15,11 @@ export async function POST(req: Request) {
     }
 
     let scheduledUTC: Date
-
     const input = body.scheduled_datetime
 
     /**
-     * If datetime string already contains timezone (Z or +05:30),
-     * JavaScript Date will convert it correctly to UTC.
+     * If datetime already has timezone info (Z or +05:30)
+     * let JS handle it
      */
     if (
       typeof input === 'string' &&
@@ -29,11 +28,18 @@ export async function POST(req: Request) {
       scheduledUTC = new Date(input)
     } else {
       /**
-       * Otherwise assume IST local time → convert to UTC
+       * Input is IST (from datetime-local)
+       * Format: YYYY-MM-DDTHH:mm
+       * We must MANUALLY convert IST → UTC
        */
-      const istDate = new Date(input)
+
+      const [datePart, timePart] = input.split('T')
+      const [year, month, day] = datePart.split('-').map(Number)
+      const [hour, minute] = timePart.split(':').map(Number)
+
+      // Create UTC date by subtracting IST offset (5:30)
       scheduledUTC = new Date(
-        istDate.getTime() - (5.5 * 60 * 60 * 1000)
+        Date.UTC(year, month - 1, day, hour - 5, minute - 30)
       )
     }
 
@@ -43,8 +49,8 @@ export async function POST(req: Request) {
       job_type: body.job_type || 'post',
       job_json: body.job_json,
       job_media_url: body.job_media_url,
-      scheduled_datetime: scheduledUTC, // ✅ ALWAYS UTC
-      created_datetime: new Date(),     // UTC by default
+      scheduled_datetime: scheduledUTC, // ✅ correct UTC
+      created_datetime: new Date(),
       job_status: 'to_do',
     })
 
