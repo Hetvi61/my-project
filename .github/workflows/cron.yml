@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Call job runner API
         run: |
-          curl -X POST https://your-app.vercel.app/api/jobs/runner \
+          curl -X POST https://my-project-lemon-three-phi.vercel.app/api/jobs/runner \
           -H "x-cron-secret: ${{ secrets.CRON_SECRET }}"
