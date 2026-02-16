@@ -7,7 +7,6 @@ export async function POST(req: Request) {
     await connectDB()
     const body = await req.json()
 
-    // basic validation
     if (!body.client_name || !body.job_name || !body.scheduled_datetime) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -15,15 +14,28 @@ export async function POST(req: Request) {
       )
     }
 
-    // 🔴 FIX STARTS HERE
-    // body.scheduled_datetime comes in IST (local time)
-    const istDate = new Date(body.scheduled_datetime)
+    let scheduledUTC: Date
 
-    // Convert IST → UTC
-    const utcDate = new Date(
-      istDate.getTime() - (5.5 * 60 * 60 * 1000)
-    )
-    // 🔴 FIX ENDS HERE
+    const input = body.scheduled_datetime
+
+    /**
+     * If datetime string already contains timezone (Z or +05:30),
+     * JavaScript Date will convert it correctly to UTC.
+     */
+    if (
+      typeof input === 'string' &&
+      (input.includes('Z') || input.includes('+'))
+    ) {
+      scheduledUTC = new Date(input)
+    } else {
+      /**
+       * Otherwise assume IST local time → convert to UTC
+       */
+      const istDate = new Date(input)
+      scheduledUTC = new Date(
+        istDate.getTime() - (5.5 * 60 * 60 * 1000)
+      )
+    }
 
     const job = await ScheduledJob.create({
       client_name: body.client_name,
@@ -31,8 +43,8 @@ export async function POST(req: Request) {
       job_type: body.job_type || 'post',
       job_json: body.job_json,
       job_media_url: body.job_media_url,
-      scheduled_datetime: utcDate, // ✅ FIXED
-      created_datetime: new Date(),
+      scheduled_datetime: scheduledUTC, // ✅ ALWAYS UTC
+      created_datetime: new Date(),     // UTC by default
       job_status: 'to_do',
     })
 
