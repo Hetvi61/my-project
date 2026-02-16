@@ -15,14 +15,33 @@ async function runJobs() {
     job_status: 'to_do',
   })
 
+  /* ================= DELAY MONITORING ================= */
+  const MAX_DELAY_MINUTES = 10
+
+  for (const job of jobs) {
+    const delayMinutes =
+      (now.getTime() - job.scheduled_datetime.getTime()) / 60000
+
+    if (delayMinutes > MAX_DELAY_MINUTES) {
+      console.warn(
+        '⚠️ Job delayed',
+        job._id.toString(),
+        `${delayMinutes.toFixed(1)} minutes`
+      )
+    }
+  }
+
+  /* ================= JOB EXECUTION ================= */
   for (const job of jobs) {
     try {
+      // Mark as in progress
       await ScheduledJob.findByIdAndUpdate(job._id, {
         job_status: 'in_progress',
       })
 
-      // TODO: WhatsApp / Email / API execution
+      // TODO: WhatsApp / Email / API execution goes here
 
+      // Move to past jobs (SUCCESS)
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -38,6 +57,7 @@ async function runJobs() {
     } catch (err) {
       console.error('Job failed:', err)
 
+      // Move to past jobs (FAILED)
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -59,6 +79,7 @@ async function runJobs() {
 /* ================= CRON / SCHEDULER ================= */
 export async function POST(req: Request) {
   console.log('RUNNER HIT AT', new Date().toISOString())
+
   const headerSecret = req.headers.get('x-cron-secret')
   const envSecret = process.env.CRON_SECRET?.trim()
 
