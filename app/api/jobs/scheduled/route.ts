@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     await connectDB()
     const body = await req.json()
 
-    // Basic validation
+    // ================= BASIC VALIDATION =================
     if (!body.client_name || !body.job_name || !body.scheduled_datetime) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -15,35 +15,54 @@ export async function POST(req: Request) {
       )
     }
 
-    /**
-     * FRONTEND sends IST from <input type="datetime-local">
-     * Format: YYYY-MM-DDTHH:mm
-     * We MUST manually convert IST → UTC
-     */
-
+    // ================= IST → UTC CONVERSION =================
+    // Input format from datetime-local: YYYY-MM-DDTHH:mm
     const input: string = body.scheduled_datetime
 
-    // Split date & time
     const [datePart, timePart] = input.split('T')
     const [year, month, day] = datePart.split('-').map(Number)
     const [hour, minute] = timePart.split(':').map(Number)
 
-    /**
-     * IST = UTC + 5:30
-     * UTC = IST - 5:30
-     */
+    // IST = UTC + 5:30 → subtract 5:30
     const scheduledUTC = new Date(
       Date.UTC(year, month - 1, day, hour - 5, minute - 30)
     )
 
+    // ================= WHATSAPP NORMALIZATION =================
+    let jobJson = body.job_json || {}
+
+    if (body.job_type === 'whatsapp') {
+      if (!body.whatsapp_number || !body.message_text) {
+        return NextResponse.json(
+          { error: 'WhatsApp number and message required' },
+          { status: 400 }
+        )
+      }
+
+      // Clean phone number
+      let phone = body.whatsapp_number.toString().trim()
+      phone = phone.replace(/\D/g, '') // remove +, spaces, etc.
+
+      // Add India country code if only 10 digits
+      if (phone.length === 10) {
+        phone = `91${phone}`
+      }
+
+      jobJson = {
+        phone,
+        message: body.message_text,
+      }
+    }
+
+    // ================= CREATE JOB =================
     const job = await ScheduledJob.create({
       client_name: body.client_name,
       job_name: body.job_name,
       job_type: body.job_type || 'post',
-      job_json: body.job_json,
-      job_media_url: body.job_media_url,
-      scheduled_datetime: scheduledUTC, // ✅ correct UTC
-      created_datetime: new Date(),     // UTC automatically
+      job_json: jobJson,
+      job_media_url: body.job_media_url || null,
+      scheduled_datetime: scheduledUTC, // ✅ UTC only
+      created_datetime: new Date(),     // UTC auto
       job_status: 'to_do',
     })
 
