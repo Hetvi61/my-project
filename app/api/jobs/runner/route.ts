@@ -5,13 +5,13 @@ import { connectDB } from '@/lib/mongodb'
 import ScheduledJob from '@/models/ScheduledJob'
 import PastJob from '@/models/PastJob'
 
-/* ✅ ADD THESE IMPORTS */
 import {
   initWhatsApp,
+  getWhatsAppStatus,
   sendScheduledWhatsAppJob,
 } from '@/lib/whatsapp'
 
-/* ✅ INITIALIZE WHATSAPP ONCE */
+// ✅ Initialize WhatsApp once
 initWhatsApp()
 
 /* ================= CORE LOGIC ================= */
@@ -24,23 +24,8 @@ async function runJobs() {
     job_status: 'to_do',
   })
 
-  /* ================= DELAY MONITORING ================= */
-  const MAX_DELAY_MINUTES = 10
+  const waStatus = getWhatsAppStatus()
 
-  for (const job of jobs) {
-    const delayMinutes =
-      (now.getTime() - job.scheduled_datetime.getTime()) / 60000
-
-    if (delayMinutes > MAX_DELAY_MINUTES) {
-      console.warn(
-        '⚠️ Job delayed',
-        job._id.toString(),
-        `${delayMinutes.toFixed(1)} minutes`
-      )
-    }
-  }
-
-  /* ================= JOB EXECUTION ================= */
   for (const job of jobs) {
     try {
       // 🔹 Mark as in progress
@@ -48,8 +33,19 @@ async function runJobs() {
         job_status: 'in_progress',
       })
 
-      /* ================= WHATSAPP EXECUTION ================= */
+      /* ================= WHATSAPP SAFETY ================= */
       if (job.job_type === 'post') {
+        if (!waStatus.ready) {
+          console.warn('⚠️ WhatsApp not ready. Will retry job later.')
+
+          // 🔁 Revert job back to to_do
+          await ScheduledJob.findByIdAndUpdate(job._id, {
+            job_status: 'to_do',
+          })
+
+          continue // ⛔ Do NOT fail cron
+        }
+
         await sendScheduledWhatsAppJob({
           phone: job.job_json?.phone,
           message: job.job_json?.message,
@@ -70,29 +66,21 @@ async function runJobs() {
       })
 
       await ScheduledJob.findByIdAndDelete(job._id)
+
     } catch (err) {
-      console.error('Job failed:', err)
+      console.error('Job error — will retry:', err)
 
-      /* ================= MOVE TO PAST (FAILED) ================= */
-      await PastJob.create({
-        client_name: job.client_name,
-        job_name: job.job_name,
-        job_type: job.job_type,
-        job_json: job.job_json,
-        job_media_url: job.job_media_url,
-        job_status: 'failed',
-        created_datetime: job.created_datetime,
-        delivered_datetime: new Date(),
+      // 🔁 IMPORTANT: retry later instead of failing forever
+      await ScheduledJob.findByIdAndUpdate(job._id, {
+        job_status: 'to_do',
       })
-
-      await ScheduledJob.findByIdAndDelete(job._id)
     }
   }
 
   return jobs.length
 }
 
-/* ================= CRON / SCHEDULER ================= */
+/* ================= CRON ================= */
 export async function POST(req: Request) {
   console.log('RUNNER HIT AT', new Date().toISOString())
 
@@ -100,36 +88,24 @@ export async function POST(req: Request) {
   const envSecret = process.env.CRON_SECRET?.trim()
 
   if (!envSecret || headerSecret !== envSecret) {
-    return NextResponse.json(
-      { error: 'Unauthorized' },
-      { status: 401 }
-    )
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const processed = await runJobs()
 
-  return NextResponse.json({
-    success: true,
-    processed,
-  })
+  return NextResponse.json({ success: true, processed })
 }
 
-/* ================= OPTIONAL MANUAL ================= */
+/* ================= MANUAL ================= */
 export async function GET(req: Request) {
   const headerSecret = req.headers.get('x-cron-secret')
   const envSecret = process.env.CRON_SECRET?.trim()
 
   if (!envSecret || headerSecret !== envSecret) {
-    return NextResponse.json(
-      { error: 'Unauthorized' },
-      { status: 401 }
-    )
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const processed = await runJobs()
 
-  return NextResponse.json({
-    success: true,
-    processed,
-  })
+  return NextResponse.json({ success: true, processed })
 }
