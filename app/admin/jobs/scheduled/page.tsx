@@ -25,13 +25,14 @@ function formatIST(dateString: string) {
 export default function ScheduledJobsPage() {
   const [jobs, setJobs] = useState<any[]>([])
   const [clients, setClients] = useState<any[]>([])
+
   const [form, setForm] = useState<any>({
     job_name: '',
     client_name: '',
     scheduled_datetime: '',
     job_type: 'post',
 
-    // 🟢 WhatsApp fields (NEW)
+    // 🟢 WhatsApp fields
     whatsapp_number: '',
     message_text: '',
     job_media_url: '',
@@ -51,6 +52,19 @@ export default function ScheduledJobsPage() {
         else setClients([])
       })
   }, [])
+
+  /* ================= CLIENT CHANGE (KEY FIX) ================= */
+  function onClientChange(clientName: string) {
+    const client = clients.find(
+      (c: any) => c.clientName === clientName
+    )
+
+    setForm(prev => ({
+      ...prev,
+      client_name: clientName,
+      whatsapp_number: client?.mobile || '', // ✅ AUTO-FILL
+    }))
+  }
 
   /* ================= CREATE JOB ================= */
   async function submit() {
@@ -94,9 +108,7 @@ export default function ScheduledJobsPage() {
 
           <select
             className="border p-2 rounded"
-            onChange={e =>
-              setForm({ ...form, client_name: e.target.value })
-            }
+            onChange={e => onClientChange(e.target.value)}
           >
             <option value="">Select Client</option>
             {clients.map((c: any) => (
@@ -125,15 +137,14 @@ export default function ScheduledJobsPage() {
             }
           />
 
-          {/* ========== WHATSAPP FIELDS (NEW) ========== */}
+          {/* ========== WHATSAPP FIELDS ========== */}
           {form.job_type === 'whatsapp' && (
             <>
               <input
                 className="border p-2 rounded"
-                placeholder="WhatsApp Number (91XXXXXXXXXX)"
-                onChange={e =>
-                  setForm({ ...form, whatsapp_number: e.target.value })
-                }
+                placeholder="WhatsApp Number"
+                value={form.whatsapp_number}
+                readOnly   // ✅ important
               />
 
               <textarea
@@ -153,7 +164,7 @@ export default function ScheduledJobsPage() {
               />
             </>
           )}
-          {/* ========================================== */}
+          {/* ===================================== */}
 
         </div>
 
