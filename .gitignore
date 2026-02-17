@@ -41,3 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+# WhatsApp Web / wwebjs session files
+whatsapp-session/
+.wwebjs_cache/
+
+# Uploads (optional, only if user-generated)
+public/uploads/

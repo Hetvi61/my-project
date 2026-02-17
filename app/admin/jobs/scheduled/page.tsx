@@ -1,10 +1,27 @@
 'use client'
 import { useEffect, useState } from 'react'
 
+/* ================= IST FORMAT HELPER (NEW) ================= */
+function formatIST(dateString: string) {
+  return new Date(dateString).toLocaleString('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  })
+}
+/* =========================================================== */
+
 export default function ScheduledJobsPage() {
   const [jobs, setJobs] = useState<any[]>([])
   const [clients, setClients] = useState<any[]>([])
   const [form, setForm] = useState<any>({
+    job_name: '',
+    client_name: '',
+    scheduled_datetime: '',
     job_type: 'post',
   })
 
@@ -45,13 +62,6 @@ export default function ScheduledJobsPage() {
     location.reload()
   }
 
-  // ================= RUN SCHEDULER (WINDOWS / DEMO) =================
-  async function runScheduler() {
-    await fetch('/api/jobs/runner', { method: 'POST' })
-    alert('Scheduler executed')
-    location.reload()
-  }
-
   return (
     <div>
       <h1 className="text-xl font-bold mb-4">Scheduled Jobs</h1>
@@ -60,7 +70,6 @@ export default function ScheduledJobsPage() {
       <div className="border p-4 mb-6 rounded bg-white">
         <div className="grid grid-cols-2 gap-4">
 
-          {/* JOB NAME */}
           <input
             className="border p-2 rounded"
             placeholder="Job Name"
@@ -69,7 +78,6 @@ export default function ScheduledJobsPage() {
             }
           />
 
-          {/* CLIENT DROPDOWN */}
           <select
             className="border p-2 rounded"
             onChange={e =>
@@ -84,7 +92,6 @@ export default function ScheduledJobsPage() {
             ))}
           </select>
 
-          {/* JOB TYPE */}
           <select
             className="border p-2 rounded"
             onChange={e =>
@@ -95,7 +102,6 @@ export default function ScheduledJobsPage() {
             <option value="video">Video</option>
           </select>
 
-          {/* SCHEDULE DATE */}
           <input
             type="datetime-local"
             className="border p-2 rounded"
@@ -105,16 +111,13 @@ export default function ScheduledJobsPage() {
           />
         </div>
 
-        {/* BUTTONS */}
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6">
           <button
             onClick={submit}
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
           >
             Create Job
           </button>
-
-          
         </div>
       </div>
 
@@ -125,7 +128,7 @@ export default function ScheduledJobsPage() {
             <th className="border p-2">Job</th>
             <th className="border p-2">Client</th>
             <th className="border p-2">Type</th>
-            <th className="border p-2">Scheduled</th>
+            <th className="border p-2">Scheduled (IST)</th>
             <th className="border p-2">Status</th>
           </tr>
         </thead>
@@ -135,9 +138,12 @@ export default function ScheduledJobsPage() {
               <td className="border p-2">{j.job_name}</td>
               <td className="border p-2">{j.client_name}</td>
               <td className="border p-2">{j.job_type}</td>
+
+              {/* ✅ ONLY THIS LINE CHANGED */}
               <td className="border p-2">
-                {new Date(j.scheduled_datetime).toLocaleString()}
+                {formatIST(j.scheduled_datetime)}
               </td>
+
               <td className="border p-2">{j.job_status}</td>
             </tr>
           ))}
