@@ -59,12 +59,13 @@ export default function ScheduledJobsPage() {
       (c: any) => c.clientName === clientName
     )
 
-    setForm(prev => ({
+    setForm((prev: any) => ({
       ...prev,
       client_name: clientName,
-      whatsapp_number: client?.mobile || '', // ✅ AUTO-FILL
+      whatsapp_number: client?.mobile || '',
     }))
   }
+
 
   /* ================= CREATE JOB ================= */
   async function submit() {
