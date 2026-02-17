@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server'
 import { connectDB } from '@/lib/mongodb'
 import ScheduledJob from '@/models/ScheduledJob'
 import PastJob from '@/models/PastJob'
+import { sendScheduledWhatsAppJob } from '@/lib/whatsapp'
 
 /* ================= CORE LOGIC ================= */
 async function runJobs() {
@@ -34,14 +35,21 @@ async function runJobs() {
   /* ================= JOB EXECUTION ================= */
   for (const job of jobs) {
     try {
-      // Mark as in progress
+      // 🔹 Mark as in progress
       await ScheduledJob.findByIdAndUpdate(job._id, {
         job_status: 'in_progress',
       })
 
-      // TODO: WhatsApp / Email / API execution goes here
+      /* ================= WHATSAPP EXECUTION ================= */
+      if (job.job_type === 'post') {
+        await sendScheduledWhatsAppJob({
+          phone: job.job_json?.phone,
+          message: job.job_json?.message,
+          mediaUrl: job.job_media_url || undefined,
+        })
+      }
 
-      // Move to past jobs (SUCCESS)
+      /* ================= MOVE TO PAST (SUCCESS) ================= */
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,
@@ -57,7 +65,7 @@ async function runJobs() {
     } catch (err) {
       console.error('Job failed:', err)
 
-      // Move to past jobs (FAILED)
+      /* ================= MOVE TO PAST (FAILED) ================= */
       await PastJob.create({
         client_name: job.client_name,
         job_name: job.job_name,

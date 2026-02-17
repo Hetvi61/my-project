@@ -1,7 +1,7 @@
 import mongoose, { Schema, models } from 'mongoose'
 
 const ScheduledJobSchema = new Schema({
-  // ✅ CLIENT NAME INSTEAD OF CLIENT ID
+  // ✅ CLIENT NAME
   client_name: {
     type: String,
     required: true,
@@ -12,12 +12,14 @@ const ScheduledJobSchema = new Schema({
     required: true,
   },
 
+  // ✅ EXTENDED JOB TYPES (post, video, whatsapp)
   job_type: {
     type: String,
-    enum: ['post', 'video'],
+    enum: ['post', 'video', 'whatsapp'],
     required: true,
   },
 
+  // ================= EXISTING FIELDS =================
   job_json: {
     type: Schema.Types.Mixed,
   },
@@ -25,6 +27,16 @@ const ScheduledJobSchema = new Schema({
   job_media_url: {
     type: String,
   },
+
+  // ================= WHATSAPP FIELDS (NEW) =================
+  whatsapp_number: {
+    type: String, // example: 91XXXXXXXXXX
+  },
+
+  message_text: {
+    type: String,
+  },
+  // ===================================================
 
   job_status: {
     type: String,

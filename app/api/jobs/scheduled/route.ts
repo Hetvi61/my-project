@@ -16,19 +16,24 @@ export async function POST(req: Request) {
     }
 
     /**
-     * IMPORTANT RULE
-     * ----------------
-     * Frontend sends IST time (from datetime-local)
-     * Backend ALWAYS converts IST → UTC ONCE
-     * MongoDB stores ONLY UTC
+     * FRONTEND sends IST from <input type="datetime-local">
+     * Format: YYYY-MM-DDTHH:mm
+     * We MUST manually convert IST → UTC
      */
 
-    // body.scheduled_datetime example: "2026-02-16T12:22"
-    const istDate = new Date(body.scheduled_datetime)
+    const input: string = body.scheduled_datetime
 
-    // Convert IST → UTC (subtract 5 hours 30 minutes)
+    // Split date & time
+    const [datePart, timePart] = input.split('T')
+    const [year, month, day] = datePart.split('-').map(Number)
+    const [hour, minute] = timePart.split(':').map(Number)
+
+    /**
+     * IST = UTC + 5:30
+     * UTC = IST - 5:30
+     */
     const scheduledUTC = new Date(
-      istDate.getTime() - (5.5 * 60 * 60 * 1000)
+      Date.UTC(year, month - 1, day, hour - 5, minute - 30)
     )
 
     const job = await ScheduledJob.create({
@@ -37,7 +42,7 @@ export async function POST(req: Request) {
       job_type: body.job_type || 'post',
       job_json: body.job_json,
       job_media_url: body.job_media_url,
-      scheduled_datetime: scheduledUTC, // ✅ stored in UTC
+      scheduled_datetime: scheduledUTC, // ✅ correct UTC
       created_datetime: new Date(),     // UTC automatically
       job_status: 'to_do',
     })

@@ -21,17 +21,16 @@ export function initWhatsApp() {
   client.on('qr', (qr) => {
     qrCode = qr
     isReady = false
-    
   })
 
   client.on('ready', () => {
     isReady = true
     qrCode = null
-    console.log(' WhatsApp READY')
+    console.log('✅ WhatsApp READY')
   })
 
   client.on('disconnected', () => {
-    console.log(' WhatsApp DISCONNECTED')
+    console.log('❌ WhatsApp DISCONNECTED')
     isReady = false
     qrCode = null
     client = null
@@ -50,7 +49,7 @@ export function getWhatsAppStatus() {
 
 // ================= SEND MESSAGE (TEXT / MEDIA) =================
 export async function sendWhatsAppMessage(
-  phone: string, // clean number only: 9198xxxxxxx
+  phone: string, // example: 9198xxxxxxxx
   content: string | MessageMedia,
   caption?: string
 ) {
@@ -58,7 +57,7 @@ export async function sendWhatsAppMessage(
     throw new Error('WhatsApp not connected')
   }
 
-  //  TRY MODERN METHOD (BEST)
+  // TRY MODERN METHOD
   try {
     const numberId = await client.getNumberId(phone)
 
@@ -73,10 +72,10 @@ export async function sendWhatsAppMessage(
       return
     }
   } catch (err) {
-    // silently fallback
+    // fallback silently
   }
 
-  //  FALLBACK METHOD (LEGACY BUT NECESSARY)
+  // FALLBACK METHOD
   const fallbackChatId = `${phone}@c.us`
 
   try {
@@ -87,11 +86,37 @@ export async function sendWhatsAppMessage(
         caption: caption || '',
       })
     }
-    return
   } catch (err) {
     throw new Error(
-      'Unable to send message. WhatsApp cannot resolve this chat. Ask the client to message you once.'
+      'Unable to send message. Ask the client to message you once.'
     )
+  }
+}
+
+// ================= ✅ NEW: SCHEDULER SAFE WRAPPER =================
+export async function sendScheduledWhatsAppJob(params: {
+  phone: string
+  message?: string
+  mediaUrl?: string
+}) {
+  // 🔐 ensure WhatsApp is initialized
+  if (!client) {
+    initWhatsApp()
+  }
+
+  if (!isReady) {
+    throw new Error('WhatsApp not ready for scheduled job')
+  }
+
+  const { phone, message, mediaUrl } = params
+
+  if (mediaUrl) {
+    const media = await MessageMedia.fromUrl(mediaUrl)
+    await sendWhatsAppMessage(phone, media, message)
+  } else if (message) {
+    await sendWhatsAppMessage(phone, message)
+  } else {
+    throw new Error('No message or media provided')
   }
 }
 
@@ -102,6 +127,6 @@ export async function logoutWhatsApp() {
     client = null
     qrCode = null
     isReady = false
-    console.log(' WhatsApp LOGGED OUT')
+    console.log('🔒 WhatsApp LOGGED OUT')
   }
 }
