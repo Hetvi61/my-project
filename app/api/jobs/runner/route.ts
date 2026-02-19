@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server'
 import { connectDB } from '@/lib/mongodb'
 import ScheduledJob from '@/models/ScheduledJob'
 import PastJob from '@/models/PastJob'
+import { sendScheduledWhatsAppJob } from '@/lib/whatsapp'
 
 /* ================= CORE LOGIC ================= */
 async function runJobs() {
@@ -29,45 +30,17 @@ async function runJobs() {
         phone = phone.replace(/\D/g, '')
 
         if (phone.length === 10) phone = `91${phone}`
-        const whatsappTo = `${phone}@c.us`
 
         if (!phone || !job.job_json?.message) {
           throw new Error('Invalid WhatsApp payload')
         }
 
-        const workerUrl = process.env.WHATSAPP_WORKER_URL
-        console.log('🌍 CALLING WORKER:', workerUrl)
-
-        if (!workerUrl) {
-          throw new Error('WHATSAPP_WORKER_URL not set')
-        }
-
-        let res
-        let responseText = ''
-
-        try {
-          res = await fetch(workerUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              to: whatsappTo,
-              message: job.job_json.message,
-              mediaUrl: job.job_media_url || null,
-            }),
-          })
-
-          responseText = await res.text()
-          console.log('📡 WORKER STATUS:', res.status)
-          console.log('📡 WORKER RESPONSE:', responseText)
-
-        } catch (fetchErr: any) {
-          console.error('🔥 FETCH FAILED:', fetchErr.message)
-          throw fetchErr
-        }
-
-        if (!res.ok) {
-          throw new Error(`Worker error: ${responseText}`)
-        }
+        // ✅ DIRECT AUTOMATIC SEND
+        await sendScheduledWhatsAppJob({
+          phone,
+          message: job.job_json.message,
+          mediaUrl: job.job_media_url || undefined,
+        })
       }
 
       /* ================= MOVE TO PAST (SUCCESS) ================= */
@@ -95,6 +68,7 @@ async function runJobs() {
         job_json: job.job_json,
         job_media_url: job.job_media_url,
         job_status: 'failed',
+        error: err.message,
         created_datetime: job.created_datetime,
         delivered_datetime: new Date(),
       })
